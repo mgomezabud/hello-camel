@@ -1,0 +1,16 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "credencial": {
+        "*": {
+          "@(2,tipo)": "[&1].tipo",
+          "@(2,nit)": "[&1].nit",
+          "@(2,fecha)": "[&1].fecha",
+          "token": "[&1].token",
+          "regimen": "[&1].regimen"
+        }
+      }
+    }
+  }
+]

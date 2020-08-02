@@ -1,0 +1,247 @@
+[
+	{
+		"operation": "shift",
+		"spec": {
+			"prescripcion": {
+				"NoPrescripcion": "prescripcion.numero",
+				"FPrescripcion": "prescripcion.fecha",
+				"HPrescripcion": "prescripcion.hora",
+				"CodEPS": "prescripcion.codigoEps",
+				"TipoTransc": "prescripcion.tipoTranscripcion",
+				"EstPres": "prescripcion.estado",
+				"CodHabIPS": "prescripcion.ips.codigoHabilitacion",
+				"TipoIDIPS": "prescripcion.ips.id.tipo",
+				"NroIDIPS": "prescripcion.ips.id.numero",
+				"CodDANEMunIPS": "prescripcion.ips.codigoDane",
+				"DirSedeIPS": "prescripcion.ips.direccion",
+				"TelSedeIPS": "prescripcion.ips.telefono",
+				"TipoIDProf": "prescripcion.profesional.id.tipo",
+				"NumIDProf": "prescripcion.profesional.id.numero",
+				"PNProfS": "prescripcion.profesional.nombre.primerNombre",
+				"SNProfS": "prescripcion.profesional.nombre.segundoNombre",
+				"PAProfS": "prescripcion.profesional.nombre.primerApellido",
+				"SAProfS": "prescripcion.profesional.nombre.segundoApellido",
+				"RegProfS": "prescripcion.profesional.registroProfesional",
+				"TipoIDPaciente": "prescripcion.paciente.id.tipo",
+				"NroIDPaciente": "prescripcion.paciente.id.numero",
+				"PNPaciente": "prescripcion.paciente.nombre.primerNombre",
+				"SNPaciente": "prescripcion.paciente.nombre.segundoNombre",
+				"PAPaciente": "prescripcion.paciente.nombre.primerApellido",
+				"SAPaciente": "prescripcion.paciente.nombre.segundoApellido",
+				"CodAmbAte": "prescripcion.ambitoAtencion.codigo",
+				"RefAmbAte": "prescripcion.ambitoAtencion.referencia",
+				"EnfHuerfana": "prescripcion.enfermedadHuerfana.tiene",
+				"CodEnfHuerfana": "prescripcion.enfermedadHuerfana.codigo",
+				"EnfHuerfanaDX": "prescripcion.enfermedadHuerfana.esDiagnosticoPrincipal",
+				"CodDxPpal": "prescripcion.diagnostico.principal",
+				"CodDxRel1": "prescripcion.diagnostico.relacionado[0]",
+				"CodDxRel2": "prescripcion.diagnostico.relacionado[1]",
+				"SopNutricional": "prescripcion.requiereSoporteNutrional",
+				"TipoIDMadrePaciente": "prescripcion.paciente.madre.id.tipo",
+				"NroIDMadrePaciente": "prescripcion.paciente.madre.id.numero",
+				"TipoIDDonanteVivo": "prescripcion.donanteVivo.id.tipo",
+				"NroIDDonanteVivo": "prescripcion.donanteVivo.id.numero"
+			},
+			"medicamentos": {
+				"*": {
+					"$1": "medicamentos.[&1].tipo",
+					"ConOrden": "medicamentos.[&1].consecutivo",
+					"TipoPrest": "medicamentos.[&1].TipoPrestacion",
+					"JustNoPBS": "medicamentos.[&1].justificacionNoPbs",
+					"IndRec": "medicamentos.[&1].indicacionesPaciente",
+					"EstJM": "medicamentos.[&1].estadoJuntaMedica",
+					"TipoMed": "medicamentos.[&1].medicamento.tipo",
+					"CausaS1": "medicamentos.[&1].medicamento.financiadoUpc",
+					"CausaS2": "medicamentos.[&1].medicamento.faseExperimental",
+					"CausaS3": "medicamentos.[&1].medicamento.utilizoMedicamentosUpc",
+					"MedPBSUtilizado": "medicamentos.[&1].medicamento.medicamentoPbsUtilizado",
+					"RznCausaS31": "medicamentos.[&1].medicamento.resultadoClinicoNoSatisfactorio",
+					"DescRzn31": "medicamentos.[&1].medicamento.descripcionResultadoClinicosNoSatisfactorio",
+					"RznCausaS32": "medicamentos.[&1].medicamento.razonesAdversas",
+					"DescRzn32": "medicamentos.[&1].medicamento.descRazonesAdversas",
+					"CausaS4": "medicamentos.[&1].medicamento.descartoTecnologiaPbs",
+					"MedPBSDescartado": "medicamentos.[&1].medicamento.medicamentoDescartado",
+					"RznCausaS41": "medicamentos.[&1].descarto[0].XReaccionesAdver.activo",
+					"DescRzn41": "medicamentos.[&1].descarto[0].XReaccionesAdver.descripcion",
+					"RznCausaS42": "medicamentos.[&1].descarto[1].XIndicaciones.activo",
+					"DescRzn42": "medicamentos.[&1].descarto[1].XIndicaciones.descripcion",
+					"RznCausaS43": "medicamentos.[&1].descarto[2].noExisteAlternativaPbs.activo",
+					"DescRzn43": "medicamentos.[&1].descarto[2].noExisteAlternativaPbs.descripcion",
+					"RznCausaS44": "medicamentos.[&1].descarto[3].XEvidencia.activo",
+					"DescRzn44": "medicamentos.[&1].descarto[3].XEvidencia.descripcion",
+					"CausaS5": "medicamentos.[&1].medicamento.medicamentoRegistrado",
+					"RznCausaS5": "medicamentos.[&1].medicamento.medicamentoEnUnirs",
+					"CausaS6": "medicamentos.[&1].medicamento.evidenciaSeguridad",
+					"DescMedPrinAct": "medicamentos.[&1].medicamento.descPrincipioActivo",
+					"CodFF": "medicamentos.[&1].medicamento.codigoFormaFarmaceutica",
+					"CodVA": "medicamentos.[&1].medicamento.codigoViaAdministracion",
+					"Dosis": "medicamentos.[&1].medicamento.dosis",
+					"dosisUm": "medicamentos.[&1].medicamento.dosisUm",
+					"NoFAdmon": "medicamentos.[&1].medicamento.numeroFrecuenciaAdmon",
+					"CodFreAdmon": "medicamentos.[&1].medicamento.codFrecuenciaAdmon",
+					"IndEsp": "medicamentos.[&1].medicamento.indicacionesEspeciales",
+					"CanTrat": "medicamentos.[&1].medicamento.cantidadTratamiento",
+					"DurTrat": "medicamentos.[&1].medicamento.duracionTratamiento",
+					"CantTotalF": "medicamentos.[&1].medicamento.cantidadTotalFormula",
+					"UFCantTotal": "medicamentos.[&1].medicamento.unidadFarmaceuticaTotal",
+					"PrincipiosActivos": {
+						"*": {
+							"ConOrden": "medicamentos.[&3].medicamento.principosActivos[&1].consecutivo",
+							"CodPriAct": "medicamentos.[&3].medicamento.principosActivos[&1].codigo",
+							"ConcCant": "medicamentos.[&3].medicamento.principosActivos[&1].concentracionCantidad",
+							"UMedConc": "medicamentos.[&3].medicamento.principosActivos[&1].unidadMedidaConcentracion",
+							"CantCont": "medicamentos.[&3].medicamento.principosActivos[&1].cantidadMedicamento",
+							"UMedCantCont": "medicamentos.[&3].medicamento.principosActivos[&1].unidadMedida"
+						}
+					},
+					"IndicacionesUNIRS": {
+						"*": {
+							"ConOrden": "medicamentos.[&3].medicamento.unirs[&1].consecutivo",
+							"CodIndicacion": "medicamentos.[&3].medicamento.unirs[&1].codigo"
+						}
+					}
+				}
+			},
+			"dispositivos": {
+				"*": {
+					"$1": "dispositivos.[&1].tipo",
+					"ConOrden": "dispositivos.[&1].consecutivo",
+					"TipoPrest": "dispositivos.[&1].TipoPrestacion",
+					"JustNoPBS": "dispositivos.[&1].justificacionNoPbs",
+					"IndRec": "dispositivos.[&1].indicacionesPaciente",
+					"EstJM": "dispositivos.[&1].estadoJuntaMedica",
+					"CausaS1": "dispositivos.[&1].dispositivo.agotoCoberturaPbs",
+					"CodDisp": "dispositivos.[&1].dispositivo.codigo",
+					"CanForm": "dispositivos.[&1].dispositivo.cantidad",
+					"CadaFreUso": "dispositivos.[&1].dispositivo.frecuenciaUso",
+					"CodFreUso": "dispositivos.[&1].dispositivo.tiempoFrecuencia",
+					"Cant": "dispositivos.[&1].dispositivo.cantidadDuracionTratamiento",
+					"CodPerDurTrat": "dispositivos.[&1].dispositivo.codigoDuracionTratamiento",
+					"CantTotal": "dispositivos.[&1].dispositivo.cantidadTotal"
+				}
+			},
+			"productosnutricionales": {
+				"*": {
+					"$1": "productosNutricionales.[&1].tipo",
+					"ConOrden": "productosNutricionales.[&1].consecutivo",
+					"TipoPrest": "productosNutricionales.[&1].TipoPrestacion",
+					"JustNoPBS": "productosNutricionales.[&1].justificacionNoPbs",
+					"IndRec": "productosNutricionales.[&1].indicacionesPaciente",
+					"EstJM": "productosNutricionales.[&1].estadoJuntaMedica",
+					"CausaS1": "productosNutricionales.[&1].producto.faseExperimental",
+					"CausaS2": "productosNutricionales.[&1].producto.registroInvima",
+					"CausaS3": "productosNutricionales.[&1].producto.financiadoUpc",
+					"CausaS4": "productosNutricionales.[&1].producto.utilizoMedicamentoUpc",
+					"ProNutUtilizado": "productosNutricionales.[&1].producto.productoUtilizado",
+					"ProNutDescartado": "productosNutricionales.[&1].producto.productoDescartado",
+					"RznCausaS41": "productosNutricionales.[&1].producto.resultadoClinicoNoSatisfactorio",
+					"DescRzn41": "productosNutricionales.[&1].producto.descripcionResultadoClinicosNoSatisfactorio",
+					"RznCausaS42": "productosNutricionales.[&1].producto.reaccionesAdversas",
+					"DescRzn42": "productosNutricionales.[&1].producto.descripcionReaccionesAdversas",
+					"CausaS5": "productosNutricionales.[&1].descarto[0].medicamentosEnUpc.activo",
+					"RznCausaS51": "productosNutricionales.[&1].descarto[1].XReaccionesAdveras.activo",
+					"DescRzn51": "productosNutricionales.[&1].descarto[1].XReaccionesAdveras.descripcion",
+					"RznCausaS52": "productosNutricionales.[&1].descarto[2].XIndicaciones.activo",
+					"DescRzn52": "productosNutricionales.[&1].descarto[2].XIndicaciones.descripcion",
+					"RznCausaS53": "productosNutricionales.[&1].descarto[3].noExisteAlternativaPbs.activo",
+					"DescRzn53": "productosNutricionales.[&1].descarto[3].noExisteAlternativaPbs.descripcion",
+					"RznCausaS54": "productosNutricionales.[&1].descarto[4].XEvidencia.activo",
+					"DescRzn54": "productosNutricionales.[&1].descarto[4].XEvidencia.descripcion",
+					"DXEnfHuer": "productosNutricionales.[&1].producto.dxEnfermedadHuerfana",
+					"DXVIH": "productosNutricionales.[&1].producto.dxVih",
+					"DXCaPal": "productosNutricionales.[&1].producto.dxCancerPaliativo",
+					"DescProdNutr": "productosNutricionales.[&1].producto.descripcion",
+					"TippProNut": "productosNutricionales.[&1].producto.tipo",
+					"CodForma": "productosNutricionales.[&1].producto.codigoForma",
+					"Dosis": "productosNutricionales.[&1].producto.dosis",
+					"DosisUM": "productosNutricionales.[&1].producto.dosisUm",
+					"NoFAdmon": "productosNutricionales.[&1].producto.numeroFrecuenciaAdministracion",
+					"CodFreAdmon": "productosNutricionales.[&1].producto.codigoFrecuenciaAdmon",
+					"IndEsp": "productosNutricionales.[&1].producto.indicacionesEspeciales",
+					"CanTrat": "productosNutricionales.[&1].producto.cantidadTratamiento",
+					"DurTrat": "productosNutricionales.[&1].producto.duracionTratamiento",
+					"CantTotalF": "productosNutricionales.[&1].producto.cantidadTotalFormula",
+					"UFCantTotal": "productosNutricionales.[&1].producto.presentacionCantTotal",
+					"NoPrescAso": "productosNutricionales.[&1].producto.numeroPrescripcionAsociada"
+				}
+			},
+			"procedimientos": {
+				"*": {
+					"$1": "procedimientos.[&1].tipo",
+					"ConOrden": "procedimientos.[&1].consecutivo",
+					"TipoPrest": "procedimientos.[&1].TipoPrestacion",
+					"JustNoPBS": "procedimientos.[&1].justificacionNoPbs",
+					"IndRec": "procedimientos.[&1].indicacionesPaciente",
+					"EstJM": "procedimientos.[&1].estadoJuntaMedica",
+					"CausaS11": "procedimientos.[&1].procedimiento.tieneCups",
+					"CausaS12": "procedimientos.[&1].procedimiento.combinacionCups",
+					"CausaS2": "procedimientos.[&1].procedimiento.faseExperimental",
+					"CausaS3": "procedimientos.[&1].procedimiento.financiadoUpc",
+					"CausaS4": "procedimientos.[&1].procedimiento.utilizoTecnologiaPbs",
+					"ProPBSUtilizado": "procedimientos.[&1].procedimiento.proPbsUtilizado",
+					"CausaS5": "procedimientos.[&1].procedimiento.descartoTecnologiaEnPbs",
+					"ProPBSDescartado": "procedimientos.[&1].procedimiento.descartoTecnologiaPbs",
+					"RznCausaS51": "procedimientos.[&1].procedimiento.noExisteAlternativaPbs",
+					"DescRzn51": "procedimientos.[&1].procedimiento.descripcionNoExisteAlternativaPbs",
+					"RznCausaS52": "procedimientos.[&1].procedimiento.descartoXEvidencia",
+					"DescRzn52": "procedimientos.[&1].procedimiento.descDescartoXEvidencia",
+					"CausaS6": "procedimientos.[&1].procedimiento.evidenciaEficacia",
+					"CausaS7": "procedimientos.[&1].procedimiento.realizaEnColombia",
+					"CodCUPS": "procedimientos.[&1].procedimiento.codigoCups",
+					"CanForm": "procedimientos.[&1].procedimiento.cantidad",
+					"CadaFreUso": "procedimientos.[&1].procedimiento.frecuenciaUso",
+					"CodFreUso": "procedimientos.[&1].procedimiento.codigoFrecuenciaUso",
+					"Cant": "procedimientos.[&1].procedimiento.cantidadDuracionTratamiento",
+					"CantTotal": "procedimientos.[&1].procedimiento.cantidadTotal",
+					"CodPerDurTrat": "procedimientos.[&1].procedimiento.codigoPeriodoDuracionTratamiento"
+				}
+			}
+		}
+	},
+	{
+		"operation": "shift",
+		"spec": {
+			"prescripcion": "prescripcion",
+			"dispositivos": {
+				"*": "tecnologias[]"
+			},
+			"procedimientos": {
+				"*": "tecnologias[]"
+			},
+			"medicamentos": {
+				"*": "tecnologias[]"
+			},
+			"productosNutricionales": {
+				"*": "tecnologias[]"
+			}
+		}
+	},
+	{
+		"operation": "shift",
+		"spec": {
+			"prescripcion": "prescripcion",
+			"tecnologias": {
+				"*": {
+					"tipo":"tecnologias[&1].tipo",
+					"consecutivo":"tecnologias[&1].consecutivo",
+					"TipoPrestacion":"tecnologias[&1].tipoPrestacion",
+					"justificacionNoPbs":"tecnologias[&1].justificacionNoPbs",
+					"estadoJuntaMedica":"tecnologias[&1].estadoJuntaMedica",
+					"procedimiento":"tecnologias[&1].procedimiento",
+					"medicamento":"tecnologias[&1].medicamento",
+					"producto":"tecnologias[&1].producto",
+					"dispositivo":"tecnologias[&1].dispositivo",
+					"descarto": {
+						"*": {
+							"*": {
+								"$0":"tecnologias[&4].descarto[&2].tipo",
+								"activo":"tecnologias[&4].descarto[&2].activo",
+								"descripcion":"tecnologias[&4].descarto[&2].descripcion"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+]
